@@ -1,0 +1,30 @@
+@mixin flex($direction, $break, $justify, $align) {
+	display: flex;
+	flex-flow: $direction $break;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin device($tipo) {
+	@if ($tipo == bigscreen) {
+		@media (min-width: 1921px) {
+			@content;
+		}
+	} @else if ($tipo == laptopL) {
+		@media (max-width: 1440px) {
+			@content;
+		}
+	} @else if ($tipo == laptopS) {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	} @else if ($tipo == tablet) {
+		@media (max-width: 768px) {
+			@content;
+		}
+	} @else if ($tipo == movil) {
+		@media (max-width: 479px) {
+			@content;
+		}
+	}
+}

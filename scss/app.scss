@@ -1,0 +1,168 @@
+@use '_mixins.scss' as *;
+@use '_reset.scss';
+
+@keyframes scroll {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(15px);
+		opacity: 0;
+	}
+}
+
+* {
+	cursor: none;
+}
+
+.cursor {
+	position: fixed;
+	left: 10px;
+	width: 15px;
+	height: 15px;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	mix-blend-mode: difference;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: width 0.5s, height 0.5s;
+	z-index: 2;
+	&.crecer {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.landing {
+	position: relative;
+	width: 100%;
+	max-height: 100vh;
+	overflow: hidden;
+	&__texto {
+		@include flex(column, nowrap, start, end);
+		position: absolute;
+		top: 27vh;
+		right: 5vw;
+		z-index: 1;
+	}
+	&__h1 {
+		font-family: 'Playfair Display', serif;
+		font-size: 8rem;
+		font-weight: 600;
+		line-height: 110px;
+		margin-bottom: 2vh;
+	}
+	&__h3 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		font-style: italic;
+		padding-right: 1vw;
+		opacity: 0.9;
+		margin-bottom: 2vh;
+	}
+	&__p {
+		padding-right: 1vw;
+		text-transform: uppercase;
+		font-style: italic;
+		opacity: 0.8;
+		&--copy {
+			position: absolute;
+			top: 4vh;
+			right: 6vw;
+			font-style: italic;
+			opacity: 0.8;
+			font-size: 0.9rem;
+		}
+		&--desliza {
+			position: relative;
+			right: 6vw;
+			text-transform: uppercase;
+			font-style: italic;
+			opacity: 0.8;
+		}
+	}
+	&__footer {
+		@include flex(row, nowrap, space-between, center);
+		position: absolute;
+		top: 83vh;
+		width: 100%;
+		height: 20vh;
+		z-index: 1;
+	}
+	&__icono {
+		width: 34px;
+		height: 55px;
+		scale: 0.8;
+		z-index: 1;
+	}
+	&__raton {
+		width: 3px;
+		padding: 10px 15px;
+		height: 35px;
+		border: 2px solid #363636;
+		border-radius: 25px;
+		opacity: 0.5;
+		box-sizing: content-box;
+	}
+	&__rueda {
+		width: 3px;
+		height: 10px;
+		border-radius: 25%;
+		background-color: #363636;
+		animation-name: scroll;
+		animation-duration: 2.2s;
+		animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+		animation-iteration-count: infinite;
+	}
+	&__img {
+		position: relative;
+		left: 2vw;
+		width: 130px;
+		filter: opacity(0.5);
+		z-index: 1;
+		&--fondo {
+			position: relative;
+			right: 2vw;
+			bottom: 10vh;
+			width: 50vw;
+			user-select: none;
+			pointer-events: none;
+		}
+	}
+}
+
+.proyectos {
+	@include flex(column, nowrap, start, center);
+	min-height: 280vh;
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: #101010;
+	&__span {
+		font-size: 17rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #eaeaea;
+	}
+	&__trigger {
+		position: relative;
+		top: 115vh;
+	}
+}
+
+.about {
+	width: 100%;
+	min-height: 70vh;
+	background-color: green;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #909090;
+}
