@@ -7,7 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@1,600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="scss/app.css" />
@@ -15,34 +15,89 @@
 		<title>Imanol Galarza | Desarrollador Web</title>
 	</head>
 	<body>
+		<span class="cursor"></span>
 		<main>
 			<div class="landing" id="landing">
-				<p class="landing__p--copy">© ✦ 2023 \///</p>
-				<div class="landing__texto">
-					<h1 class="landing__h1">Imanol Galarza</h1>
-					<h3 class="landing__h3">Desarrollador Web</h3>
-					<p class="landing__p">Hola! Soy un desarrollador web apasionado de la informática</p>
-					<p class="landing__p">que disfruta programando tanto front como back</p>
-					<p class="landing__p">//</p>
-					<p class="landing__p">Aquí podrás ver trabajos de desarrollo web y diseño gráfico</p>
+				<p class="landing__p">© ✦ 2023 \///</p>
+				<div class="landing__texto texto">
+					<h1 class="texto__h1">Imanol Galarza</h1>
+					<h3 class="texto__h3">Desarrollador Web</h3>
+					<p class="texto__p">Hola! Soy un desarrollador web apasionado de la informática</p>
+					<p class="texto__p">que disfruta programando tanto front como back</p>
+					<p class="texto__p">//</p>
+					<p class="texto__p">Aquí podrás ver trabajos de desarrollo web y diseño gráfico</p>
 				</div>
-				<div class="landing__footer">
-					<img src="assets/Logo.png" alt="" class="landing__img" />
-					<div class="landing__icono">
-						<div class="landing__raton">
-							<div class="landing__rueda"></div>
+				<div class="landing__footer footer">
+					<img src="assets/Logo.png" alt="" class="footer__img" />
+					<div class="footer__icono">
+						<div class="footer__raton">
+							<div class="footer__rueda"></div>
 						</div>
 					</div>
-					<p class="landing__p--desliza">Desliza para ver más</p>
+					<p class="footer__p">Desliza para ver más</p>
 				</div>
-				<img src="assets/Landing.jpg" alt="" class="landing__img--fondo" id="landing__img" />
+				<img src="assets/Landing.jpg" alt="" class="landing__img" id="landing__img" />
 			</div>
+			<div class="efecto">
+				<span class="efecto__span" id="efecto__span">Trabajos recientes</span>
+				<span class="efecto__trigger" id="trigger"></span>
+				<div class="efecto__texto2 texto2" id="texto2">
+					<p class="texto2__p">
+						Estos son algunos de los proyectos que he hecho recientemente. Si quieres ver más, haz click en
+						el enlace a GitHub que hay mas abajo.
+					</p>
+				</div>
+			</div>
+			<span class="trigger2" id="trigger2"></span>
 			<div class="proyectos">
-				<span class="proyectos__span" id="proyectos__span">Trabajos recientes</span>
-				<div class="proyectos__trigger" id="trigger"></div>
+				<section class="proyectos__section section">
+					<a href="https://disney-plus-ten-blue.vercel.app/" target="_blank" class="section__a">
+						<img src="#" alt="" class="section__img" />
+					</a>
+					<div class="section__texto">
+						<h3 class="section__h3">Disney+ ✦ Copycat de la web en Español</h3>
+					</div>
+				</section>
+				<section class="proyectos__section section">
+					<a href="https://portfolio-cik32p04l-igalarey.vercel.app/" target="_blank" class="section__a">
+						<img src="#" alt="" class="section__img" />
+					</a>
+					<div class="section__texto">
+						<h3 class="section__h3">Portfolio V1 ✦ El primer portfolio que hice</h3>
+					</div>
+				</section>
+				<section class="proyectos__section section">
+					<a
+						href="https://www.behance.net/gallery/56547715/Logofolio-Vol-1"
+						target="_blank"
+						class="section__a"
+					>
+						<img src="#" alt="" class="section__img" />
+					</a>
+					<div class="section__texto">
+						<h3 class="section__h3">Logofolio 2017 ✦ Unos cuantos logos que hice como hobby</h3>
+					</div>
+				</section>
+				<section class="proyectos__contacto contacto">
+					<div class="contacto__loop">
+						<h2 class="contacto__h2">Contacto -&nbsp;</h2>
+						<h2 class="contacto__h2">Contacto -&nbsp;</h2>
+						<h2 class="contacto__h2">Contacto -&nbsp;</h2>
+						<h2 class="contacto__h2">Contacto -&nbsp;</h2>
+						<h2 class="contacto__h2">Contacto -&nbsp;</h2>
+					</div>
+					<div class="contacto__texto3 texto3">
+						<a href="https://www.linkedin.com/in/igalarey/" target="_blank" class="texto3__a">LinkedIn</a>
+						<a href="https://github.com/igalarey" target="_blank" class="texto3__a">GitHub</a>
+						<a href="https://www.behance.net/igalarey" target="_blank" class="texto3__a">Behance</a>
+						<a href="assets/Imanol_Galarza_cv.pdf" target="_blank" class="texto3__a">Currículum</a>
+						<h3 class="texto3__h3">
+							Si tienes cualquier duda o quieres comentarme algo, puedes escribirme a
+							<strong>igalarey@gmail.com</strong>
+						</h3>
+					</div>
+				</section>
 			</div>
-			<div class="about" id="about"></div>
 		</main>
-		<div class="cursor"></div>
 	</body>
 </html>

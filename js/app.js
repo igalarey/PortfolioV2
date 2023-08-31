@@ -26,24 +26,46 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-	var span = document.getElementById('proyectos__span')
+	var span = document.getElementById('efecto__span')
+	var texto = document.getElementById('texto2')
 	var trigger = document.getElementById('trigger')
-	var about = document.getElementById('about')
-	window.addEventListener('scroll', () => {
+	var trigger2 = document.getElementById('trigger2')
+	var scrollPosAnt = window.scrollY
+	var initialScale = 0.6
+	var finalScale = 1
+	var zoom = initialScale
+	window.addEventListener('scroll', (e) => {
 		var posicion = trigger.getBoundingClientRect().top
-		var posicionAbout = about.getBoundingClientRect().top
-		if (posicion <= window.innerHeight) {
-			span.style.position = 'fixed'
-			span.style.top = '52.2vh'
-			span.style.transform = 'scale(0.45)'
+		var posicionAbout = trigger2.getBoundingClientRect().top
+		var scrollPosAct = window.scrollY
+		if (scrollPosAct > scrollPosAnt) {
+			if (posicion <= window.innerHeight && posicionAbout >= window.innerHeight) {
+				span.style.position = 'fixed'
+				span.style.top = '52.2vh'
+				zoom = initialScale - (initialScale - finalScale) * (posicion / window.innerHeight)
+				span.style.transform = `scale(${zoom})`
+			} else {
+				span.style.position = 'relative'
+				span.style.top = '70vh'
+			}
 		} else {
-			span.style.position = 'relative'
-			span.style.top = '70vh'
-			span.style.transform = 'scale(1)'
+			if (posicion <= window.innerHeight && posicionAbout >= window.innerHeight) {
+				span.style.position = 'fixed'
+				span.style.top = '52.2vh'
+				zoom = initialScale + (finalScale - initialScale) * (posicion / window.innerHeight)
+				span.style.transform = `scale(${zoom})`
+			} else {
+				span.style.position = 'relative'
+				span.style.top = '70vh'
+			}
 		}
 		if (posicionAbout <= window.innerHeight) {
 			span.style.position = 'relative'
 			span.style.top = '232vh'
+			texto.style.top = '242vh'
+		} else {
+			texto.style.top = '245vh'
 		}
+		scrollPosAnt = scrollPosAct
 	})
 })
