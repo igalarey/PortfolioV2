@@ -164,6 +164,10 @@ svg {
   height: 25px;
 }
 
+.portrait {
+  display: none;
+}
+
 .landing {
   position: relative;
   width: 100%;
@@ -336,7 +340,11 @@ svg {
 
 .section__img {
   height: 100vh;
-  background-color: #909090;
+  transition: 0.2s ease-in-out;
+}
+.section__img:hover {
+  scale: 1.01;
+  border: 1px solid #eaeaea;
 }
 .section__texto {
   display: flex;
@@ -403,4 +411,180 @@ svg {
   line-height: 30px;
   text-transform: uppercase;
   opacity: 0.9;
+}
+
+@media (min-width: 1921px) {
+  h1,
+  h2,
+  h3,
+  p,
+  span {
+    font-size: 150%;
+  }
+}
+@media (max-width: 1440px) {
+  p {
+    font-size: 70%;
+  }
+  .texto__h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+  .texto__h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  .texto__p {
+    font-size: 80%;
+  }
+  .efecto__span {
+    font-size: 1300%;
+  }
+  .section__h3 {
+    font-size: 100%;
+  }
+  .contacto__h2 {
+    font-size: 600%;
+  }
+  .texto3__a, .texto3__h3 {
+    font-size: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .landing__p {
+    font-size: 60%;
+  }
+  .texto__h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+  }
+  .texto__h3 {
+    line-height: 0;
+    font-size: 0.9rem;
+    margin-bottom: 2vh;
+  }
+  .texto__p {
+    font-size: 60%;
+  }
+  .footer {
+    scale: 0.8;
+  }
+  .footer__p {
+    font-size: 75%;
+  }
+  .efecto__span {
+    font-size: 1000%;
+  }
+  .texto2__p {
+    font-size: 60%;
+    line-height: 15px;
+  }
+  .section__h3 {
+    font-size: 80%;
+  }
+  .contacto__h2 {
+    font-size: 500%;
+  }
+  .texto3__a, .texto3__h3 {
+    font-size: 70%;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  * {
+    cursor: auto;
+  }
+  .cursor {
+    width: 0;
+  }
+  .cursor.crecer {
+    width: 0;
+  }
+  .landing__img {
+    bottom: 3vh;
+  }
+  .landing__p {
+    font-size: 60%;
+  }
+  .texto {
+    top: 30vh;
+  }
+  .texto__h1 {
+    font-size: 3rem;
+    line-height: 55px;
+    margin-bottom: 2vh;
+  }
+  .texto__h3 {
+    line-height: 0;
+    font-size: 1rem;
+    margin-bottom: 4vh;
+  }
+  .texto__p {
+    font-size: 60%;
+    line-height: 15px;
+  }
+  .footer {
+    display: none;
+    top: 34vh;
+    scale: 1;
+  }
+  .footer__img {
+    width: 60px;
+  }
+  .footer__icono {
+    scale: 0.4;
+  }
+  .footer__p {
+    font-size: 60%;
+  }
+  .efecto__span {
+    font-size: 600%;
+  }
+  .texto2__p {
+    font-size: 40%;
+    line-height: 15px;
+  }
+  .proyectos {
+    top: 325vh;
+    min-height: 200vh;
+  }
+  .proyectos__section {
+    min-height: 50vh;
+  }
+  .section__img {
+    height: 80vh;
+  }
+  .section__h3 {
+    font-size: 60%;
+  }
+  .contacto {
+    min-height: 100vh;
+  }
+  .contacto__loop {
+    top: 300vh;
+  }
+  .contacto__h2 {
+    font-size: 450%;
+  }
+  .texto3__a, .texto3__h3 {
+    text-align: center;
+    font-size: 60%;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .portrait {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: #101010;
+  }
+  .portrait__h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #eaeaea;
+  }
 }/*# sourceMappingURL=app.css.map */

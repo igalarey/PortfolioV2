@@ -19,7 +19,7 @@
 			@content;
 		}
 	} @else if ($tipo == tablet) {
-		@media (max-width: 768px) {
+		@media (max-width: 768px) and (orientation: landscape) {
 			@content;
 		}
 	} @else if ($tipo == movil) {
