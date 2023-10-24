@@ -57,7 +57,7 @@
 .landing {
 	position: relative;
 	width: 100%;
-	max-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 	&__p {
 		position: absolute;
@@ -84,8 +84,7 @@
 	}
 	&__img {
 		position: relative;
-		right: 2vw;
-		bottom: 10vh;
+		top: 16vh;
 		width: 50vw;
 		user-select: none;
 		pointer-events: none;
