@@ -1,7 +1,7 @@
 
 # Portfolio V2
 
-![Captura](https://i.imgur.com/YdLsGho.png)
+![Captura](https://i.imgur.com/NxidyMT.png)
 
 ## 🔴 En vivo
 
