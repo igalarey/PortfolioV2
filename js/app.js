@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const foto = document.querySelector('#landing__img')
 	document.addEventListener('mousemove', (e) => {
-		const x = (window.innerWidth - e.pageX) * 0.05
-		const y = (window.innerHeight - e.pageY) * 0.02
+		const x = (window.innerWidth - e.pageX) * 0.01
+		const y = (window.innerHeight - e.pageY) * 0.01
 		foto.style.transform = `translateX(${x}px) translateY(${y}px)`
 	})
 

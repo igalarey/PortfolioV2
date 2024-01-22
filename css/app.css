@@ -177,7 +177,7 @@ svg {
 .landing__p {
   position: absolute;
   top: 4vh;
-  right: 6vw;
+  left: 4vw;
   font-style: italic;
   opacity: 0.8;
   font-size: 0.9rem;
@@ -188,7 +188,7 @@ svg {
   justify-content: start;
   align-items: end;
   position: absolute;
-  top: 27vh;
+  top: 32vh;
   right: 5vw;
   z-index: 1;
 }
@@ -204,9 +204,10 @@ svg {
   z-index: 1;
 }
 .landing__img {
-  position: relative;
-  top: 16vh;
-  width: 50vw;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  width: 30vw;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -421,9 +422,20 @@ svg {
     font-size: 150%;
   }
 }
+@media (max-width: 1680px) {
+  .landing__img {
+    top: 5vh;
+  }
+}
 @media (max-width: 1440px) {
   p {
     font-size: 70%;
+  }
+  .landing__img {
+    top: 22vh;
+  }
+  .texto {
+    top: 35vh;
   }
   .texto__h1 {
     font-size: 5rem;
@@ -452,6 +464,12 @@ svg {
 @media (max-width: 1024px) {
   .landing__p {
     font-size: 60%;
+  }
+  .landing__img {
+    top: 28vh;
+  }
+  .texto {
+    top: 35vh;
   }
   .texto__h1 {
     font-size: 3.5rem;
